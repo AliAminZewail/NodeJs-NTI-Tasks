@@ -10,8 +10,13 @@ const setAccs = function(accs){
 }
 
 const clearWindow=function(){
-    let table=document.querySelector('table');
-    table.classList.add('d-none');
+    let del=document.querySelectorAll('tr');
+  del.forEach(element => {
+      element.remove();
+  });
+
+    /*let table=document.querySelector('table');
+    table.classList.add('d-none');*/
 }
 
 let first=document.querySelectorAll('.btn')[0];
@@ -99,10 +104,7 @@ const addToScreen=function(parent,tag,att,classes,text){
 
 let fifth=document.querySelectorAll('.btn')[4];
 fifth.addEventListener('click',function add(){
-    let table=document.querySelector('table');
-    table.classList.remove('d-none');
-    let del=document.querySelectorAll('tr');
-  
+    clearWindow();
 
     p1=document.querySelector('thead');
     tr=addToScreen(p1,'tr',{},'','');
@@ -122,7 +124,9 @@ fifth.addEventListener('click',function add(){
 
  let sixth=document.querySelectorAll('.btn')[5];
  sixth.addEventListener('click',function add(){
+    clearWindow();
     let searchWord=getUserData('enter filter '); 
+    
     let table=document.querySelector('table');
      table.classList.remove('d-none');
      p1=document.querySelector('thead');
