@@ -1,0 +1,24 @@
+{{>header}}
+{{>navbar}}
+<table class="table table-stripped">
+<thead>
+    <th>_id</th>
+    <th>title</th>
+    <th>description</th>
+    <th>actions</th>
+</thead>
+<tbody>
+    <tr>
+        <td>{{this._id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.description}}</td>
+        <td>
+        <a href="" class="m-1 btn btn-primary">show</a>
+        <a href="" class="m-1 btn btn-primary">delete</a>
+        <a href="" class="m-1 btn btn-primary">edit</a>
+    </td>
+    </tr>
+</tbody>
+</table>
+
+{{>footer}}

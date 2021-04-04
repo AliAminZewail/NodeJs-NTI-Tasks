@@ -1,0 +1,32 @@
+{{>header}}
+{{>navbar}}
+
+{{#if data}}
+<h1>data{{data._id}}</h1>
+<form class="form-control container my-3" method="post" action="/addData/{{data._id}}">
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Task Title</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{data.title}}" name="title" value = "{{data.title}}">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">task description</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{data.description}}" name="description" value="{{data.description}}">
+</div>
+<button class="btn btn-success">add</button>
+</form>
+
+{{else}}
+<form class="form-control container my-3" method="post" action="/addData/{{sos._id}}">
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Task Title</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="title" value = "{{data.title}}">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">task description</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="description" value="{{data.description}}">
+</div>
+<button class="btn btn-success">add</button>
+</form>
+{{/if}}
+
+{{>footer}}
