@@ -1,0 +1,19 @@
+{
+  "name": "booksapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "validator": "^13.5.2",
+    "yargs": "^16.2.0"
+  },
+  "description": ""
+}
